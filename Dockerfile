@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Create volumes for data and output
 VOLUME /app/data
+VOLUME /app/output
 
 # Copy the current directory contents into the container at /app
 COPY . /app
@@ -21,4 +22,4 @@ COPY . /app
 ENV NAME World
 
 # Run load_data.py when the container launches
-CMD ["python", "process_data.py"]
+CMD ["python3", "process_data.py"]
